@@ -1,0 +1,63 @@
+<h1><center>New Car Page</center></h1>
+<%= form_with scope: :car, url: cars_path, local: true do |form| %>
+
+<% if @car.errors.any? %>
+    <div id="error_explanation">
+      <h4>
+        <%= pluralize(@car.errors.count, "error") %> prohibited this vehicle from being saved:
+      </h4>
+      <ul>
+        <% @car.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <p>
+    <%= form.label :year %><br>
+    <%= form.text_field :year %>
+  </p>
+
+  <p>
+    <%= form.label :make %><br>
+    <%= form.text_field :make %>
+  </p>
+
+  <p>
+    <%= form.label :model %><br>
+    <%= form.text_field :model %>
+  </p>
+
+  <p>
+    <%= form.label :drivetrain %><br>
+    <%= form.text_field :drivetrain %>
+  </p>
+
+  <p>
+    <%= form.label :engine %><br>
+    <%= form.text_field :engine %>
+  </p>
+
+  <p>
+    <%= form.label :fueltype %><br>
+    <%= form.text_field :fueltype %>
+  </p>
+
+  <p>
+    <%= form.label :price %><br>
+    <%= form.text_field :price %>
+  </p>
+
+  <p>
+    <%= form.label :mileage %><br>
+    <%= form.text_field :mileage %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<center><%= link_to 'Cancel', controller: 'cars' %></center>
+<center><%= link_to 'Return To Main Page', controller: 'welcome' %></center>
