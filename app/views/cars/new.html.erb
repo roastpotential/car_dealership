@@ -1,4 +1,6 @@
-<h1><center>New Car Page</center></h1>
+<%= render 'layouts/header' %>
+
+<h1 class="font-weight-light">New Car Page</h1>
 <%= form_with scope: :car, url: cars_path, local: true do |form| %>
 
 <% if @car.errors.any? %>
@@ -59,5 +61,4 @@
   </p>
 <% end %>
 
-<center><%= link_to 'Cancel', controller: 'cars' %></center>
-<center><%= link_to 'Return To Main Page', controller: 'welcome' %></center>
+<button class="btn btn-danger" type="button" ><%= link_to "Cancel", controller: 'cars' %></button>

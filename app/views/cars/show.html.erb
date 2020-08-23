@@ -1,3 +1,5 @@
+<%= render 'layouts/header' %>
+
 <p>
   <strong>Year:</strong>
   <%= @car.year %>
@@ -41,5 +43,3 @@
 <%= link_to 'Update Vehicle', edit_car_path(@car) %>
 <%= link_to 'Delete Vehicle', car_path(@car), method: :delete, 
                     data: { confirm: 'Are you sure you want to delete this vehicle?' } %>
-<center><%= link_to 'Return To Cars Inventory', controller: 'cars' %></center>
-<center><%= link_to 'Return To Main Page', controller: 'welcome' %></center>

@@ -1,6 +1,6 @@
-<h1><center>Cars Inventory</center></h1>
+<%= render 'layouts/header' %>
 
-<center><%= link_to 'Add New Car', new_car_path %></center>
+<h1 class="font-weight-light">Cars Inventory</h1>
 
 <table>
     <tr>
@@ -35,5 +35,3 @@
         </tr>
     <% end %>
 </table>
-
-<center><%= link_to 'Return To Main Page', controller: 'welcome' %></center>
