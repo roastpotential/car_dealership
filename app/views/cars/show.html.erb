@@ -40,6 +40,6 @@
   <%= @car.mileage %>
 </p>
 
-<%= link_to 'Update Vehicle', edit_car_path(@car) %>
-<%= link_to 'Delete Vehicle', car_path(@car), method: :delete, 
-                    data: { confirm: 'Are you sure you want to delete this vehicle?' } %>
+<button class= "btn btn-primary blue-color"> <%= link_to 'Update Vehicle', edit_car_path(@car) %></button>
+<button class="btn btn-danger" type="button" ><%= link_to 'Delete Vehicle', car_path(@car), method: :delete, 
+                    data: { confirm: 'Are you sure you want to delete this vehicle?' } %></button>
